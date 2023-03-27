@@ -18,7 +18,7 @@ switch:n — поменять текущий элемент местами с э
 
 Пример 1:
 
-solution(document.querySelector('entry'))
+`solution(document.querySelector('entry'))`
 
 До:
 
