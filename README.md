@@ -36,6 +36,7 @@ solution(document.querySelector('entry'))
         <div>Блок 2</div>
     </div>
 </entry>
+
 Пояснение:
 
 "Блок 2" был скопирован 3 раза — теперь элементов "Блок 2" — четыре.
@@ -57,6 +58,7 @@ solution(document.querySelector('entry'))
         <div>Блок 5</div>
     </div>
 </entry>
+
 После:
 
 <entry>
@@ -66,6 +68,7 @@ solution(document.querySelector('entry'))
         <div>Блок 5</div>
     </div>
 </entry>
+
 Пояснение:
 
 Количество блоков "Блок 1" не увеличилось, т.к. он был удалён родителем с помощью removeChildren.
@@ -91,6 +94,7 @@ solution(document.querySelector('entry'))
         <p>Блок 5</p>
     </section>
 </entry>
+
 После:
 
 <entry>
@@ -107,12 +111,14 @@ solution(document.querySelector('entry'))
         <p>Блок 5</p>
     </section>
 </entry>
+
 Пояснение:
 
 Из-за приоритета операций сначала был скопирован второй элемент — в section теперь четыре элемента.
 Из-за операции switch первый блок внутри section поменялся местами с третьим
 Из-за remove:5 в "Блок 1" был удалён "Блок 2"
 Из-за remove:5 в "Блок 3" был удалён "Блок 4" (в двух элементах внутри section, т.к. они были скопированы)
+
 Пример 4:
 
 solution(document.querySelector('entry'))
@@ -124,6 +130,7 @@ solution(document.querySelector('entry'))
     <div x-make="switch:3">2</div>
     <div x-make="switch:5">3</div>
 </entry>
+
 После:
 
 <entry>
@@ -131,11 +138,13 @@ solution(document.querySelector('entry'))
     <div>2</div>
     <div>3</div>
 </entry>
+
 Пояснение:
 
 "Блок 1" меняется местами с "Блок 3". Далее в контейнере первым элементом с x-make будет идти "Блок 3" — он поменяется местами с "Блок 1". Оставшийся "Блок 2" меняется местами сам с собой, то есть остаётся на месте.
 
-Примечания
+<b>Примечания</b>
+
 Решение должно представлять из себя функцию с названием solution, принимающую на вход DOM-элемент - точку входа.
 
 Исходный код нужно оформить следующим образом:
