@@ -22,23 +22,23 @@ solution(document.querySelector('entry'))
 
 До:
 
-<entry>
+`<entry>
     <div>
         <div x-make="remove:1">Блок 1</div>
         <div x-make="copy:3">Блок 2</div>
     </div>
-</entry>
+</entry>`
 
 После:
 
-<entry>
+`<entry>
     <div>
         <div>Блок 1</div>
         <div>Блок 2</div>
         <div>Блок 2</div>
         <div>Блок 2</div>
     </div>
-</entry>
+</entry>`
 
 Пояснение:
 
@@ -52,7 +52,7 @@ solution(document.querySelector('entry'))
 
 До:
 
-<entry>
+`<entry>
     <div x-make="removeChildren:2">
         <div x-make="copy:100">Блок 1</div>
         <div>Блок 2</div>
@@ -60,17 +60,17 @@ solution(document.querySelector('entry'))
         <div>Блок 4</div>
         <div>Блок 5</div>
     </div>
-</entry>
+</entry>`
 
 После:
 
-<entry>
+`<entry>
     <div>
         <div>Блок 4</div>
         <div>Блок 3</div>
         <div>Блок 5</div>
     </div>
-</entry>
+</entry>`
 
 Пояснение:
 
@@ -84,7 +84,7 @@ solution(document.querySelector('entry'))
 
 До:
 
-<entry>
+`<entry>
     <section>
         <div x-make="switch:2">
             <div x-make="remove:5">Блок 1</div>
@@ -96,11 +96,11 @@ solution(document.querySelector('entry'))
         </div>
         <p>Блок 5</p>
     </section>
-</entry>
+</entry>`
 
 После:
 
-<entry>
+`<entry>
     <section>
         <div>
             <div>Блок 3</div>
@@ -113,7 +113,7 @@ solution(document.querySelector('entry'))
         </div>
         <p>Блок 5</p>
     </section>
-</entry>
+</entry>`
 
 Пояснение:
 
@@ -124,23 +124,23 @@ solution(document.querySelector('entry'))
 
 Пример 4:
 
-solution(document.querySelector('entry'))
+`solution(document.querySelector('entry'))`
 
 До:
 
-<entry>
+`<entry>
     <div x-make="switch:2">1</div>
     <div x-make="switch:3">2</div>
     <div x-make="switch:5">3</div>
-</entry>
+</entry>`
 
 После:
 
-<entry>
+`<entry>
     <div>1</div>
     <div>2</div>
     <div>3</div>
-</entry>
+</entry>`
 
 Пояснение:
 
@@ -152,7 +152,7 @@ solution(document.querySelector('entry'))
 
 Исходный код нужно оформить следующим образом:
 
-function solution(entryPoint) {  
+`function solution(entryPoint) {  
     // ваше решение
-}
+}`
 Решение будет тестироваться в последней версии браузера Google Chrome.
